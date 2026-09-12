@@ -23,9 +23,15 @@ dist/               build output (generated, not committed)
 
 ## 1. Turn on hosting (one switch, once)
 
-The deploy workflow is already in the repository. GitHub needs to be told to use it:
+The deploy workflow is already in the repository and builds the site correctly —
+GitHub just has to be told to publish it. The workflow asks for this automatically,
+but that request needs repository-admin rights the workflow token does not have, so
+do it once by hand:
 
 **Settings → Pages → Build and deployment → Source: _GitHub Actions_**
+
+(Direct link: `https://github.com/JenMorgan/renovations-landing/settings/pages`.)
+Then re-run the latest "Build and deploy" workflow from the Actions tab.
 
 Then push to the default branch (or run the "Build and deploy" workflow manually from
 the Actions tab). About a minute later the site is live at:

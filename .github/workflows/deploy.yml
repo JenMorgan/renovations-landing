@@ -29,8 +29,10 @@ jobs:
       - name: Build the site
         run: node build.mjs
       - uses: actions/configure-pages@v5
-        # Turns Pages on by itself the first time, so nothing has to be
-        # clicked in the repository settings.
+        # Asks GitHub to switch Pages on. The workflow token is usually not
+        # allowed to do this, in which case the first run fails here and Pages
+        # has to be enabled once by hand:
+        # Settings -> Pages -> Build and deployment -> Source: GitHub Actions.
         with:
           enablement: true
       - uses: actions/upload-pages-artifact@v3
