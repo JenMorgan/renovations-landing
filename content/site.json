@@ -1,12 +1,21 @@
 {
   "brand": {
     "name": "Northline Renovations",
-    "tagline": { "en": "construction & renovation", "uk": "будівництво та ремонт", "ru": "строительство и ремонт" }
+    "tagline": {
+      "en": "construction & renovation",
+      "uk": "будівництво та ремонт",
+      "ru": "строительство и ремонт"
+    }
   },
   "site": {
     "url": "https://jenmorgan.github.io/renovations-landing",
+    "customDomain": "",
     "defaultLocale": "en",
-    "locales": ["en", "uk", "ru"]
+    "locales": [
+      "en",
+      "uk",
+      "ru"
+    ]
   },
   "contact": {
     "phone": "+31 6 12345678",
@@ -14,10 +23,26 @@
     "whatsapp": "31612345678",
     "telegram": "",
     "instagram": "",
-    "address": { "en": "Amsterdam, Netherlands", "uk": "Амстердам, Нідерланди", "ru": "Амстердам, Нидерланды" },
-    "hours": { "en": "Mon–Sat, 9:00–19:00", "uk": "Пн–Сб, 9:00–19:00", "ru": "Пн–Сб, 9:00–19:00" },
-    "geo": { "latitude": 52.3676, "longitude": 4.9041 },
-    "areaServed": ["Amsterdam", "Haarlem", "Utrecht", "Hilversum"]
+    "address": {
+      "en": "Amsterdam, Netherlands",
+      "uk": "Амстердам, Нідерланди",
+      "ru": "Амстердам, Нидерланды"
+    },
+    "hours": {
+      "en": "Mon–Sat, 9:00–19:00",
+      "uk": "Пн–Сб, 9:00–19:00",
+      "ru": "Пн–Сб, 9:00–19:00"
+    },
+    "geo": {
+      "latitude": 52.3676,
+      "longitude": 4.9041
+    },
+    "areaServed": [
+      "Amsterdam",
+      "Haarlem",
+      "Utrecht",
+      "Hilversum"
+    ]
   },
   "forms": {
     "provider": "web3forms",
@@ -25,8 +50,36 @@
     "endpoint": "https://api.web3forms.com/submit"
   },
   "stats": [
-    { "value": "15+", "label": { "en": "years of experience", "uk": "років досвіду", "ru": "лет опыта" }, "icon": "award" },
-    { "value": "100+", "label": { "en": "projects delivered", "uk": "проєктів виконано", "ru": "проектов выполнено" }, "icon": "building" },
-    { "value": { "en": "Contract", "uk": "Договір", "ru": "Договор" }, "label": { "en": "for every project", "uk": "на кожен проєкт", "ru": "на каждый проект" }, "icon": "doc" }
+    {
+      "value": "15+",
+      "label": {
+        "en": "years of experience",
+        "uk": "років досвіду",
+        "ru": "лет опыта"
+      },
+      "icon": "award"
+    },
+    {
+      "value": "100+",
+      "label": {
+        "en": "projects delivered",
+        "uk": "проєктів виконано",
+        "ru": "проектов выполнено"
+      },
+      "icon": "building"
+    },
+    {
+      "value": {
+        "en": "Contract",
+        "uk": "Договір",
+        "ru": "Договор"
+      },
+      "label": {
+        "en": "for every project",
+        "uk": "на кожен проєкт",
+        "ru": "на каждый проект"
+      },
+      "icon": "doc"
+    }
   ]
 }

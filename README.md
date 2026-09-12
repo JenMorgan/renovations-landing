@@ -48,12 +48,35 @@ rebuilds and redeploys automatically.
 > pushed. If you rename it to `main` (Settings → Branches), update the branch names in
 > `.github/workflows/deploy.yml` and `admin/config.yml` to match.
 
-### A custom domain (recommended)
+### Giving it a nicer address
 
-A real domain like `northline-renovations.nl` ranks better and looks like a business.
-Buy one, then in **Settings → Pages → Custom domain** enter it and follow the DNS
-instructions. Afterwards change `site.url` in `content/site.json` to the same address,
-because canonical links, `hreflang` tags and `sitemap.xml` are generated from it.
+`jenmorgan.github.io/renovations-landing` works, but it reads like a code
+repository. Three ways to improve it, cheapest first:
+
+| Option | Address | Cost | What it takes |
+|---|---|---|---|
+| Rename the repository | `jenmorgan.github.io/northline-renovations` | free | Settings → rename. Still carries the GitHub username. |
+| Host the same build on Cloudflare Pages or Netlify | `northline-renovations.pages.dev` / `.netlify.app` | free | Connect the repo, build command `node build.mjs`, output directory `dist`. The `/admin/` sign-in also works without extra setup there. |
+| **Own domain** | `northline-renovations.nl` | ~€10–15 a year | Buy it, point DNS at the host, and set it below. Best for search rankings, email on the same domain, and looking like a business. |
+
+Once a domain exists, put it in `content/site.json` (or **Company details → Custom
+domain** in the editor):
+
+```json
+"site": { "customDomain": "northline-renovations.nl" }
+```
+
+The build then writes the `CNAME` file GitHub Pages needs and switches every
+canonical link, `hreflang` alternate and sitemap URL to that domain. On GitHub's
+side: **Settings → Pages → Custom domain**, plus the DNS records it shows you
+(four `A` records for the apex, or a `CNAME` for `www`).
+
+### What this does not need
+
+No server, no database, no Supabase, no Vercel account. The pages are pre-rendered
+HTML, the content lives in this repository, and form submissions go straight to email.
+Cloudflare Pages, Netlify and Vercel are interchangeable alternatives to GitHub Pages
+if you prefer their subdomains or their build UI — same `node build.mjs`, same `dist`.
 
 ## 2. Make the forms deliver email
 
@@ -81,8 +104,19 @@ the page automatically, so nobody can post to the site directly.
 ### Option A — the editor at `/admin/`
 
 `https://jenmorgan.github.io/renovations-landing/admin/` opens a form-based editor
-([Sveltia CMS](https://github.com/sveltia/sveltia-cms)) for projects, photos, reviews,
-prices and contact details. Saving commits to this repository and the site rebuilds.
+([Sveltia CMS](https://github.com/sveltia/sveltia-cms)). Saving commits to this
+repository and the site rebuilds. Five sections:
+
+- **Projects and case studies** — photos, galleries, and the full case study text
+- **Client feedback** — the reviews shown on the page
+- **Services, prices, advantages** — the icon rows and the price table
+- **Company details** — name, phone, email, socials, address, hours, hero numbers,
+  languages, custom domain, and the key the forms deliver through
+- **Website texts** — headings, buttons, form labels and the SEO title/description,
+  per language
+
+Every text field appears once per language, and a field left empty falls back to the
+default language instead of rendering blank.
 
 Signing in needs one of the following, because GitHub Pages cannot run a login
 service itself:
@@ -112,6 +146,17 @@ Put image files in `content/images/projects/` and reference them from
 - The `.svg` files currently in that folder are placeholders — replace them.
 - `hero.svg` is the big background image at the top of the page, `contact.svg` the one
   next to the contact form.
+
+### Adding a text key
+
+`content/locales/*.json` is mirrored field-by-field in the editor, because the editor
+drops keys it does not know about when it saves. After adding or renaming a key, run:
+
+```bash
+node scripts/gen-texts-collection.mjs
+```
+
+and commit `admin/config.yml`. The pull-request check fails if the two drift apart.
 
 ### Languages
 
@@ -150,7 +195,8 @@ Worth doing by hand, in order of impact:
 ```bash
 node build.mjs           # build into dist/
 node build.mjs --serve   # build, then serve on http://localhost:4173
-node scripts/make-placeholders.mjs   # regenerate placeholder images
+node scripts/make-placeholders.mjs        # regenerate placeholder images
+node scripts/gen-texts-collection.mjs     # refresh the editor's text fields
 ```
 
 Node 18 or newer. There is nothing to install.

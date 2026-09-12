@@ -5,12 +5,16 @@ import { icon, starRow } from './icons.mjs';
 export const esc = (v = '') =>
   String(v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-/** Pick a localised value: {en,uk,ru} → string. Plain strings pass through. */
+const filled = (v) => v != null && v !== '' && !(Array.isArray(v) && v.length === 0);
+
+/** Pick a localised value: {en,uk,ru} → string. Plain strings pass through.
+ *  An empty translation falls back rather than rendering a blank. */
 export const tr = (value, locale, fallback = 'en') => {
   if (value == null) return '';
   if (typeof value === 'string' || typeof value === 'number') return String(value);
   if (Array.isArray(value)) return value;
-  return value[locale] ?? value[fallback] ?? Object.values(value)[0] ?? '';
+  for (const key of [locale, fallback]) if (filled(value[key])) return value[key];
+  return Object.values(value).find(filled) ?? '';
 };
 
 const path = (base, p) => `${base}${p}`;

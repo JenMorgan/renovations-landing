@@ -13,6 +13,11 @@ jobs:
         with:
           node-version: '22'
       - run: node build.mjs
+      - name: The editor must still list every text key
+        run: |
+          node scripts/gen-texts-collection.mjs
+          git diff --exit-code admin/config.yml \
+            || (echo "admin/config.yml is out of date: run node scripts/gen-texts-collection.mjs and commit" && exit 1)
       - name: Every page must exist and be non-empty
         run: |
           test -s dist/index.html

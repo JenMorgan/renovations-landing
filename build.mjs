@@ -32,12 +32,38 @@ const advantages = await readList('content/advantages.json');
 const projects = await readList('content/projects.json');
 const reviews = await readList('content/reviews.json');
 
+/** Fill gaps in a translation from the default language, so a key that was
+ *  never translated (or was blanked in the editor) still shows something. */
+const withFallback = (base, override) => {
+  if (Array.isArray(base)) return Array.isArray(override) && override.length ? override : base;
+  if (base && typeof base === 'object') {
+    const out = { ...base };
+    for (const [key, value] of Object.entries(base)) {
+      out[key] = withFallback(value, override?.[key]);
+    }
+    for (const [key, value] of Object.entries(override || {})) {
+      if (!(key in base)) out[key] = value;
+    }
+    return out;
+  }
+  return override === '' || override == null ? base : override;
+};
+
 const locales = site.site.locales;
+const defaultLocale = site.site.defaultLocale;
 const locale2t = {};
-for (const code of locales) locale2t[code] = await readJson(`content/locales/${code}.json`);
+const baseStrings = await readJson(`content/locales/${defaultLocale}.json`);
+for (const code of locales) {
+  const own = code === defaultLocale ? baseStrings : await readJson(`content/locales/${code}.json`);
+  locale2t[code] = withFallback(baseStrings, own);
+}
 site.localeMeta = locale2t;
 
-const ORIGIN = site.site.url.replace(/\/+$/, '');
+/* A custom domain wins over the default Pages address: it becomes the origin
+   for canonical links, hreflang and the sitemap, and GitHub Pages needs it in
+   a CNAME file at the root of the published site. */
+const customDomain = (site.site.customDomain || '').trim().replace(/^https?:\/\//, '').replace(/\/.*$/, '');
+const ORIGIN = customDomain ? `https://${customDomain}` : site.site.url.replace(/\/+$/, '');
 const abs = (p) => `${ORIGIN}/${p.replace(/^\/+/, '')}`;
 
 const brandName = (locale) => tr(site.brand.name, locale);
@@ -241,8 +267,10 @@ await writeFile(join(OUT, 'sitemap.xml'), buildSitemap());
 await writeFile(join(OUT, 'robots.txt'), robots());
 await writeFile(join(OUT, '404.html'), notFound());
 await writeFile(join(OUT, '.nojekyll'), '');
+if (customDomain) await writeFile(join(OUT, 'CNAME'), `${customDomain}\n`);
 
 console.log(`Built ${urls.length} pages for [${locales.join(', ')}] into ./${OUT}`);
+console.log(`Public address: ${ORIGIN}${customDomain ? ' (custom domain, CNAME written)' : ''}`);
 
 /* ---------- optional dev server ---------- */
 
