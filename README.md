@@ -21,20 +21,24 @@ build.mjs           the generator
 dist/               build output (generated, not committed)
 ```
 
-## 1. Turn on hosting (one switch, once)
+## 1. Turn on hosting (one dropdown, once)
 
 The deploy workflow is already in the repository and builds the site correctly —
-GitHub just has to be told to publish it. The workflow asks for this automatically,
-but that request needs repository-admin rights the workflow token does not have, so
-do it once by hand:
+GitHub just has to be told to publish *the workflow's output* rather than the
+repository files. Open:
 
-**Settings → Pages → Build and deployment → Source: _GitHub Actions_**
+**Settings → Pages → Build and deployment → Source**
+(`https://github.com/JenMorgan/renovations-landing/settings/pages`)
 
-(Direct link: `https://github.com/JenMorgan/renovations-landing/settings/pages`.)
-Then re-run the latest "Build and deploy" workflow from the Actions tab.
+and set Source to **GitHub Actions**.
 
-Then push to the default branch (or run the "Build and deploy" workflow manually from
-the Actions tab). About a minute later the site is live at:
+> Not "Deploy from a branch". That option hands the repository root to Jekyll, so the
+> homepage becomes this README and `/en/` returns 404 — the built pages live in
+> `dist/`, which is generated at deploy time and never committed. If you see the README
+> as the homepage, the Source is still set to a branch.
+
+Then go to the **Actions** tab → "Build and deploy" → **Re-run all jobs** (or push any
+commit). About a minute later the site is live at:
 
 ```
 https://jenmorgan.github.io/renovations-landing/
@@ -119,17 +123,40 @@ Every text field appears once per language, and a field left empty falls back to
 default language instead of rendering blank.
 
 Signing in needs one of the following, because GitHub Pages cannot run a login
-service itself:
+service itself. **"Sign In with GitHub" fails with "Authentication aborted" until one
+of the first two is in place** — that button needs an OAuth service to talk to.
 
-- **Personal access token** — in the editor choose to sign in with a token, and use a
-  GitHub fine-grained token limited to this repository with *Contents: read and write*.
-  Simplest option, nothing to deploy.
-- **GitHub OAuth app** — host the small
-  [Sveltia CMS authenticator](https://github.com/sveltia/sveltia-cms-auth) on
-  Cloudflare Workers (free) and add `backend.base_url` to `admin/config.yml`. Nicer for
-  several editors.
-- Or move hosting to **Cloudflare Pages / Netlify**, where the login works out of the
-  box. The build command there is `node build.mjs` and the output directory is `dist`.
+**Access token (simplest — nothing to deploy)**
+
+1. Open `https://github.com/settings/personal-access-tokens/new`.
+2. Token name: anything. Expiration: up to a year.
+3. Repository access → *Only select repositories* → `renovations-landing`.
+4. Permissions → Repository permissions → **Contents: Read and write**.
+   (Nothing else is needed.)
+5. Generate, copy the token.
+6. In the editor press **Sign In Using Access Token** and paste it.
+
+The token stays in that browser. Anyone with it can commit to this repository, so
+treat it like a password and revoke it on the same settings page when it is no longer
+needed. Each editor should generate their own.
+
+**GitHub OAuth app (a proper "Sign In with GitHub" button)**
+
+Host the small [Sveltia CMS authenticator](https://github.com/sveltia/sveltia-cms-auth)
+on Cloudflare Workers (free), then add its address to `admin/config.yml`:
+
+```yaml
+backend:
+  name: github
+  repo: JenMorgan/renovations-landing
+  branch: claude/renovation-services-page-al4mim
+  base_url: https://your-worker.workers.dev
+```
+
+Worth it once more than one person edits the site.
+
+**Or move hosting to Cloudflare Pages / Netlify**, where the login works out of the
+box — build command `node build.mjs`, output directory `dist`.
 
 ### Option B — edit the files on github.com
 
