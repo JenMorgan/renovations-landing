@@ -27,15 +27,20 @@ The deploy workflow is already in the repository. GitHub needs to be told to use
 
 **Settings → Pages → Build and deployment → Source: _GitHub Actions_**
 
-Then push to `main` (or run the "Build and deploy" workflow manually from the Actions
-tab). About a minute later the site is live at:
+Then push to the default branch (or run the "Build and deploy" workflow manually from
+the Actions tab). About a minute later the site is live at:
 
 ```
 https://jenmorgan.github.io/renovations-landing/
 ```
 
-Every later push to `main` — including saves from the content editor — rebuilds and
-redeploys automatically.
+Every later push to the default branch — including saves from the content editor —
+rebuilds and redeploys automatically.
+
+> This repository's default branch is currently
+> `claude/renovation-services-page-al4mim`, because that is where the site was first
+> pushed. If you rename it to `main` (Settings → Branches), update the branch names in
+> `.github/workflows/deploy.yml` and `admin/config.yml` to match.
 
 ### A custom domain (recommended)
 

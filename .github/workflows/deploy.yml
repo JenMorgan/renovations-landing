@@ -2,7 +2,11 @@ name: Build and deploy
 
 on:
   push:
-    branches: [main]
+    # The repository's default branch. If you rename it to "main", drop the
+    # second entry here and update `branch:` in admin/config.yml to match.
+    branches:
+      - main
+      - claude/renovation-services-page-al4mim
   workflow_dispatch:
 
 permissions:

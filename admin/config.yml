@@ -4,7 +4,8 @@
 backend:
   name: github
   repo: JenMorgan/renovations-landing
-  branch: main
+  # Must be the branch the site is deployed from (see .github/workflows/deploy.yml).
+  branch: claude/renovation-services-page-al4mim
 
 publish_mode: simple
 media_folder: content/images/projects
