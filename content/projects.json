@@ -1,22 +1,22 @@
 {
   "items": [
     {
-      "id": "amsterdam-apartment",
+      "id": "alphen-aan-den-rijn",
       "category": "renovation",
       "featured": true,
-      "cover": "images/projects/apartment-cover.svg",
+      "cover": "/images/projects/4BCAE7AA-BE36-42FF-93B2-0D667752CCD1.png",
       "gallery": [
         "images/projects/apartment-1.svg",
         "images/projects/apartment-2.svg",
         "images/projects/apartment-3.svg"
       ],
       "title": {
-        "en": "Apartment in Amsterdam",
+        "en": "Bathroom in Alphen aan de Rijn",
         "uk": "Квартира в Амстердамі",
-        "ru": "Квартира в Амстердаме"
+        "ru": "Ванна в Альбине"
       },
       "subtitle": {
-        "en": "Turnkey renovation",
+        "en": "Renovation",
         "uk": "Ремонт під ключ",
         "ru": "Ремонт под ключ"
       },
@@ -25,10 +25,10 @@
         "uk": "Амстердам, Oud-West",
         "ru": "Амстердам, Oud-West"
       },
-      "year": "2024",
-      "area": "85 m²",
+      "year": "2026",
+      "area": "115 m²",
       "duration": {
-        "en": "3 months",
+        "en": "2 weeks",
         "uk": "3 місяці",
         "ru": "3 месяца"
       },
