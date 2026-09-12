@@ -1,0 +1,24 @@
+name: Check build
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node build.mjs
+      - name: Every page must exist and be non-empty
+        run: |
+          test -s dist/index.html
+          for lang in en uk ru; do
+            test -s "dist/$lang/index.html"
+            test -s "dist/$lang/projects/amsterdam-apartment.html"
+          done
+          test -s dist/sitemap.xml
+          test -s dist/robots.txt

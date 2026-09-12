@@ -1,0 +1,306 @@
+# Sveltia CMS / Decap CMS configuration.
+# Opens at /admin/ on the published site. Anything saved here is committed
+# to this repository, which triggers a rebuild of the website.
+backend:
+  name: github
+  repo: JenMorgan/renovations-landing
+  branch: main
+
+publish_mode: simple
+media_folder: content/images/projects
+public_folder: images/projects
+
+collections:
+  - name: projects
+    label: "Projects and case studies"
+    files:
+      - name: list
+        label: "Projects"
+        file: content/projects.json
+        description: "Photos and case studies shown on the site."
+        fields:
+          - name: items
+            label: "Projects"
+            label_singular: "Project"
+            widget: list
+            summary: "{{fields.title.en}}"
+            fields:
+              - { name: id, label: "URL slug (lowercase letters, digits, dashes)", widget: string, required: true, pattern: ["^[a-z0-9-]+$", "Lowercase letters, digits and dashes only"] }
+              - { name: category, label: "Category", widget: select, options: [renovation, construction, interior, commercial], default: renovation }
+              - { name: featured, label: "Show on the home page", widget: boolean, required: false }
+              - { name: cover, label: "Cover photo", widget: image, required: true }
+              - name: gallery
+                label: "Photo gallery"
+                widget: list
+                required: false
+                field: { name: image, label: "Photo", widget: image }
+              - name: title
+                label: "Title"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string, required: true }
+                  - { name: uk, label: "Ukrainian", widget: string, required: false }
+                  - { name: ru, label: "Russian", widget: string, required: false }
+              - name: subtitle
+                label: "Short label (e.g. Turnkey renovation)"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string, required: true }
+                  - { name: uk, label: "Ukrainian", widget: string, required: false }
+                  - { name: ru, label: "Russian", widget: string, required: false }
+              - name: location
+                label: "Location"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string, required: true }
+                  - { name: uk, label: "Ukrainian", widget: string, required: false }
+                  - { name: ru, label: "Russian", widget: string, required: false }
+              - { name: year, label: "Year", widget: string, required: false }
+              - { name: area, label: "Area (e.g. 85 m2)", widget: string, required: false }
+              - name: duration
+                label: "Duration"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string, required: true }
+                  - { name: uk, label: "Ukrainian", widget: string, required: false }
+                  - { name: ru, label: "Russian", widget: string, required: false }
+              - { name: budget, label: "Budget (leave empty to hide)", widget: string, required: false }
+              - name: summary
+                label: "Summary (one or two sentences)"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: text, required: true }
+                  - { name: uk, label: "Ukrainian", widget: text, required: false }
+                  - { name: ru, label: "Russian", widget: text, required: false }
+              - name: challenge
+                label: "The task"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: text, required: false }
+                  - { name: uk, label: "Ukrainian", widget: text, required: false }
+                  - { name: ru, label: "Russian", widget: text, required: false }
+              - name: solution
+                label: "Our solution"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: text, required: false }
+                  - { name: uk, label: "Ukrainian", widget: text, required: false }
+                  - { name: ru, label: "Russian", widget: text, required: false }
+              - name: result
+                label: "Result"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: text, required: false }
+                  - { name: uk, label: "Ukrainian", widget: text, required: false }
+                  - { name: ru, label: "Russian", widget: text, required: false }
+              - name: scope
+                label: "Scope of work"
+                widget: object
+                fields:
+                  - name: en
+                    label: "English"
+                    widget: list
+                    required: false
+                    field: { name: item, label: "Line", widget: string }
+                  - name: uk
+                    label: "Ukrainian"
+                    widget: list
+                    required: false
+                    field: { name: item, label: "Line", widget: string }
+                  - name: ru
+                    label: "Russian"
+                    widget: list
+                    required: false
+                    field: { name: item, label: "Line", widget: string }
+  - name: reviews
+    label: "Client feedback"
+    files:
+      - name: list
+        label: "Reviews"
+        file: content/reviews.json
+        description: "Feedback sent through the website arrives by email. Add the ones you want published here."
+        fields:
+          - name: items
+            label: "Reviews"
+            label_singular: "Review"
+            widget: list
+            summary: "{{fields.author.en}}"
+            fields:
+              - name: author
+                label: "Author (name, city)"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string, required: true }
+                  - { name: uk, label: "Ukrainian", widget: string, required: false }
+                  - { name: ru, label: "Russian", widget: string, required: false }
+              - { name: rating, label: "Rating (1-5)", widget: number, default: 5, value_type: int, min: 1, max: 5 }
+              - { name: photo, label: "Photo (optional)", widget: image, required: false }
+              - name: text
+                label: "Feedback"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: text, required: true }
+                  - { name: uk, label: "Ukrainian", widget: text, required: false }
+                  - { name: ru, label: "Russian", widget: text, required: false }
+  - name: offering
+    label: "Services, prices, advantages"
+    files:
+      - name: services
+        label: "Services"
+        file: content/services.json
+        fields:
+          - name: items
+            label: "Services"
+            label_singular: "Service"
+            widget: list
+            summary: "{{fields.title.en}}"
+            fields:
+              - { name: icon, label: "Icon", widget: select, options: [home, blueprint, bricks, helmet, permit, award, building, doc, shield-check, shield, steps, camera, calendar, check], default: home }
+              - name: title
+                label: "Title"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string, required: true }
+                  - { name: uk, label: "Ukrainian", widget: string, required: false }
+                  - { name: ru, label: "Russian", widget: string, required: false }
+              - name: text
+                label: "Description"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: text, required: true }
+                  - { name: uk, label: "Ukrainian", widget: text, required: false }
+                  - { name: ru, label: "Russian", widget: text, required: false }
+      - name: prices
+        label: "Price list"
+        file: content/prices.json
+        fields:
+          - name: items
+            label: "Price list"
+            label_singular: "Row"
+            widget: list
+            summary: "{{fields.label.en}}"
+            fields:
+              - name: label
+                label: "What it is"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string, required: true }
+                  - { name: uk, label: "Ukrainian", widget: string, required: false }
+                  - { name: ru, label: "Russian", widget: string, required: false }
+              - { name: price, label: "Price (e.g. 8,000 EUR)", widget: string, required: true }
+              - { name: unit, label: "Unit", widget: select, required: false, options: [{ label: "Fixed price", value: "" }, { label: "per square metre", value: perSqm }] }
+      - name: advantages
+        label: "Why clients choose us"
+        file: content/advantages.json
+        fields:
+          - name: items
+            label: "Why clients choose us"
+            label_singular: "Advantage"
+            widget: list
+            summary: "{{fields.title.en}}"
+            fields:
+              - { name: icon, label: "Icon", widget: select, options: [home, blueprint, bricks, helmet, permit, award, building, doc, shield-check, shield, steps, camera, calendar, check], default: check }
+              - name: title
+                label: "Title"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string, required: true }
+                  - { name: uk, label: "Ukrainian", widget: string, required: false }
+                  - { name: ru, label: "Russian", widget: string, required: false }
+              - name: text
+                label: "Description"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: text, required: true }
+                  - { name: uk, label: "Ukrainian", widget: text, required: false }
+                  - { name: ru, label: "Russian", widget: text, required: false }
+  - name: settings
+    label: "Company details"
+    files:
+      - name: site
+        label: "Contacts, name, form delivery"
+        file: content/site.json
+        fields:
+          - name: brand
+            label: "Company"
+            widget: object
+            fields:
+              - { name: name, label: "Name", widget: string }
+              - name: tagline
+                label: "Tagline under the name"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string, required: true }
+                  - { name: uk, label: "Ukrainian", widget: string, required: false }
+                  - { name: ru, label: "Russian", widget: string, required: false }
+          - name: site
+            label: "Addresses and languages"
+            widget: object
+            fields:
+              - { name: url, label: "Website address", widget: string, hint: "Used for SEO links and the sitemap" }
+              - { name: defaultLocale, label: "Default language", widget: select, options: [en, uk, ru], default: en }
+              - name: locales
+                label: "Languages shown"
+                widget: list
+                field: { name: code, label: "Code", widget: select, options: [en, uk, ru] }
+          - name: contact
+            label: "Contacts"
+            widget: object
+            fields:
+              - { name: phone, label: "Phone", widget: string, required: false }
+              - { name: email, label: "Email that receives requests", widget: string }
+              - { name: whatsapp, label: "WhatsApp number, digits only", widget: string, required: false }
+              - { name: telegram, label: "Telegram", widget: string, required: false }
+              - { name: instagram, label: "Instagram", widget: string, required: false }
+              - name: address
+                label: "City / address"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string, required: false }
+                  - { name: uk, label: "Ukrainian", widget: string, required: false }
+                  - { name: ru, label: "Russian", widget: string, required: false }
+              - name: hours
+                label: "Opening hours"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string, required: false }
+                  - { name: uk, label: "Ukrainian", widget: string, required: false }
+                  - { name: ru, label: "Russian", widget: string, required: false }
+              - name: geo
+                label: "Map coordinates"
+                widget: object
+                required: false
+                fields:
+                  - { name: latitude, label: Latitude, widget: number, value_type: float, required: false }
+                  - { name: longitude, label: Longitude, widget: number, value_type: float, required: false }
+              - name: areaServed
+                label: "Cities served (helps search engines)"
+                widget: list
+                required: false
+                field: { name: city, label: City, widget: string }
+          - name: forms
+            label: "Where form submissions go"
+            widget: object
+            fields:
+              - { name: provider, label: Provider, widget: string, default: web3forms }
+              - { name: accessKey, label: "Web3Forms access key", widget: string, hint: "Free key from web3forms.com, tied to the email above" }
+              - { name: endpoint, label: Endpoint, widget: string, default: "https://api.web3forms.com/submit" }
+          - name: stats
+            label: "Numbers in the hero block"
+            widget: list
+            fields:
+              - { name: icon, label: "Icon", widget: select, options: [home, blueprint, bricks, helmet, permit, award, building, doc, shield-check, shield, steps, camera, calendar, check], default: award }
+              - name: value
+                label: "Big value (e.g. 15+)"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string, required: true }
+                  - { name: uk, label: "Ukrainian", widget: string, required: false }
+                  - { name: ru, label: "Russian", widget: string, required: false }
+              - name: label
+                label: "Caption"
+                widget: object
+                fields:
+                  - { name: en, label: "English", widget: string, required: true }
+                  - { name: uk, label: "Ukrainian", widget: string, required: false }
+                  - { name: ru, label: "Russian", widget: string, required: false }

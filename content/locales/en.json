@@ -1,0 +1,154 @@
+{
+  "name": "English",
+  "nativeName": "English",
+  "htmlLang": "en",
+  "dir": "ltr",
+  "meta": {
+    "title": "Turnkey Construction & Renovation",
+    "description": "Turnkey renovation and construction: design, permits, full finishing and technical supervision. Transparent estimates, staged payments, work under contract.",
+    "keywords": "renovation, turnkey renovation, construction, apartment renovation, house building, interior finishing, contractor"
+  },
+  "nav": {
+    "services": "Services",
+    "projects": "Projects",
+    "prices": "Prices",
+    "about": "About",
+    "reviews": "Reviews",
+    "contact": "Contact"
+  },
+  "cta": {
+    "estimate": "Get an estimate",
+    "exactEstimate": "Get an exact estimate",
+    "viewProjects": "View projects",
+    "viewProject": "View project",
+    "allProjects": "All projects",
+    "back": "Back to home",
+    "whatsapp": "Message on WhatsApp",
+    "call": "Call us",
+    "send": "Send",
+    "sending": "Sending…",
+    "leaveReview": "Leave feedback",
+    "close": "Close",
+    "skipToContent": "Skip to content"
+  },
+  "hero": {
+    "line1": "Turnkey construction",
+    "line2": "and renovation",
+    "subtitle": "Quality. Transparency. On schedule."
+  },
+  "sections": {
+    "projects": {
+      "title": "Our projects",
+      "subtitle": "Case studies from recent work"
+    },
+    "services": {
+      "title": "Our services"
+    },
+    "prices": {
+      "title": "Indicative prices",
+      "note": "Final price depends on scope, materials and site condition. The estimate is free."
+    },
+    "why": {
+      "title": "Why clients choose us"
+    },
+    "reviews": {
+      "title": "Client feedback"
+    },
+    "contact": {
+      "title": "Have a project? Let's talk.",
+      "subtitle": "Leave a request and we will get back to you shortly."
+    }
+  },
+  "project": {
+    "location": "Location",
+    "year": "Year",
+    "area": "Area",
+    "duration": "Duration",
+    "budget": "Budget",
+    "scope": "Scope of work",
+    "challenge": "The task",
+    "solution": "Our solution",
+    "result": "Result",
+    "gallery": "Photos",
+    "similar": "Other projects",
+    "requestSimilar": "Request a similar project"
+  },
+  "filters": {
+    "all": "All",
+    "renovation": "Renovation",
+    "construction": "Construction",
+    "interior": "Interiors",
+    "commercial": "Commercial"
+  },
+  "prices": {
+    "from": "from",
+    "perSqm": "/ m²"
+  },
+  "forms": {
+    "estimateTitle": "Request an estimate",
+    "estimateSubtitle": "Tell us about the project — we will reply with an indicative price and next steps.",
+    "reviewTitle": "Leave feedback",
+    "reviewSubtitle": "Thank you for taking the time. Your feedback is sent to the team by email and may be published on this page with your permission.",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email",
+    "city": "City",
+    "message": "Tell us about your project",
+    "reviewMessage": "Your feedback",
+    "projectType": "Type of work",
+    "projectTypePlaceholder": "Select type of work",
+    "area": "Area, m²",
+    "budget": "Budget",
+    "budgetPlaceholder": "Select a range",
+    "timeline": "Desired start",
+    "rating": "Rating",
+    "photos": "Photos (optional)",
+    "photosHint": "You can attach photos of the site — up to 5 files.",
+    "consent": "I agree to be contacted about this request.",
+    "required": "Please fill in this field",
+    "invalidEmail": "Please enter a valid email address",
+    "success": "Thank you! Your message has been sent — we will be in touch shortly.",
+    "successReview": "Thank you for your feedback!",
+    "error": "Something went wrong. Please write to us at {email} or message us on WhatsApp.",
+    "mailtoNotice": "Your email app will open with the message ready to send.",
+    "options": {
+      "type": [
+        "Turnkey renovation",
+        "Partial renovation",
+        "Bathroom / kitchen",
+        "New build",
+        "Extension",
+        "Design & drawings",
+        "Other"
+      ],
+      "budget": [
+        "up to €10,000",
+        "€10,000 – €30,000",
+        "€30,000 – €75,000",
+        "€75,000 – €150,000",
+        "over €150,000",
+        "Not decided yet"
+      ],
+      "timeline": [
+        "As soon as possible",
+        "In 1–3 months",
+        "In 3–6 months",
+        "Just planning"
+      ]
+    },
+    "timelinePlaceholder": "Select a period",
+    "publishConsent": "I agree that my feedback may be published on this website.",
+    "requiredCheck": "Please tick this box to continue"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "madeWith": "Built with care.",
+    "privacy": "We use your contact details only to answer your request."
+  },
+  "a11y": {
+    "langSwitcher": "Change language",
+    "menu": "Menu",
+    "prev": "Previous",
+    "next": "Next"
+  }
+}

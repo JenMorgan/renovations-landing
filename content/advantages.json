@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "icon": "shield-check",
+      "title": {
+        "en": "Transparent estimate",
+        "uk": "Прозорий кошторис",
+        "ru": "Прозрачная смета"
+      },
+      "text": {
+        "en": "Every line itemised before work starts. No surprise extras.",
+        "uk": "Кожен пункт узгоджено до початку робіт. Без несподіваних доплат.",
+        "ru": "Каждый пункт согласован до начала работ. Без неожиданных доплат."
+      }
+    },
+    {
+      "icon": "steps",
+      "title": {
+        "en": "We work in stages",
+        "uk": "Працюємо поетапно",
+        "ru": "Работаем поэтапно"
+      },
+      "text": {
+        "en": "You pay for each stage only once it is accepted.",
+        "uk": "Ви платите за етап лише після його приймання.",
+        "ru": "Вы платите за этап только после его приёмки."
+      }
+    },
+    {
+      "icon": "camera",
+      "title": {
+        "en": "Photo reports",
+        "uk": "Фотозвіти процесу",
+        "ru": "Фотоотчёты процесса"
+      },
+      "text": {
+        "en": "Weekly photo updates, so you can follow progress remotely.",
+        "uk": "Щотижневі фотозвіти — бачите прогрес навіть дистанційно.",
+        "ru": "Еженедельные фотоотчёты — видите прогресс даже дистанционно."
+      }
+    },
+    {
+      "icon": "shield",
+      "title": {
+        "en": "Quality control",
+        "uk": "Контроль якості",
+        "ru": "Контроль качества"
+      },
+      "text": {
+        "en": "Our own supervisor checks every stage against the drawings.",
+        "uk": "Власний технагляд перевіряє кожен етап за кресленнями.",
+        "ru": "Собственный технадзор проверяет каждый этап по чертежам."
+      }
+    },
+    {
+      "icon": "calendar",
+      "title": {
+        "en": "Deadlines kept",
+        "uk": "Дотримання термінів",
+        "ru": "Соблюдение сроков"
+      },
+      "text": {
+        "en": "Schedule fixed in the contract, with a clear handover date.",
+        "uk": "Графік зафіксований у договорі, з чіткою датою здачі.",
+        "ru": "График зафиксирован в договоре, с четкой датой сдачи."
+      }
+    }
+  ]
+}

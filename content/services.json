@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "icon": "home",
+      "title": {
+        "en": "Turnkey renovation",
+        "uk": "Ремонт під ключ",
+        "ru": "Ремонт под ключ"
+      },
+      "text": {
+        "en": "Full cycle of work — from demolition to final finishing and cleaning.",
+        "uk": "Повний цикл робіт — від демонтажу до чистового оздоблення та прибирання.",
+        "ru": "Полный цикл работ — от демонтажа до чистовой отделки и уборки."
+      }
+    },
+    {
+      "icon": "blueprint",
+      "title": {
+        "en": "Design & drawings",
+        "uk": "Проєктування та креслення",
+        "ru": "Проектирование и чертежи"
+      },
+      "text": {
+        "en": "Architectural solutions, layouts and technical documentation.",
+        "uk": "Архітектурні рішення, планування та технічна документація.",
+        "ru": "Архитектурные решения, планировки и техническая документация."
+      }
+    },
+    {
+      "icon": "bricks",
+      "title": {
+        "en": "Construction",
+        "uk": "Будівництво",
+        "ru": "Строительство"
+      },
+      "text": {
+        "en": "Houses and extensions of any complexity, built turnkey.",
+        "uk": "Будинки та прибудови будь-якої складності, під ключ.",
+        "ru": "Дома и пристройки любой сложности, под ключ."
+      }
+    },
+    {
+      "icon": "helmet",
+      "title": {
+        "en": "Technical supervision",
+        "uk": "Технічний нагляд",
+        "ru": "Технический надзор"
+      },
+      "text": {
+        "en": "Quality control at every stage of the build.",
+        "uk": "Контроль якості на всіх етапах будівництва.",
+        "ru": "Контроль качества на всех этапах строительства."
+      }
+    },
+    {
+      "icon": "permit",
+      "title": {
+        "en": "Permits & paperwork",
+        "uk": "Дозволи та документація",
+        "ru": "Разрешения и документация"
+      },
+      "text": {
+        "en": "Help with obtaining permits and approvals.",
+        "uk": "Допомога в отриманні дозволів і погоджень.",
+        "ru": "Помощь в получении разрешений и согласований."
+      }
+    }
+  ]
+}

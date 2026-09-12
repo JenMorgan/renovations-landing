@@ -1,0 +1,49 @@
+{
+  "items": [
+    {
+      "label": {
+        "en": "Consultation & site visit",
+        "uk": "Консультація та виїзд",
+        "ru": "Консультация и выезд"
+      },
+      "price": "€150",
+      "unit": ""
+    },
+    {
+      "label": {
+        "en": "Design / drawings",
+        "uk": "Дизайн / креслення",
+        "ru": "Дизайн / чертежи"
+      },
+      "price": "€800",
+      "unit": ""
+    },
+    {
+      "label": {
+        "en": "Bathroom renovation",
+        "uk": "Ремонт ванної",
+        "ru": "Ремонт ванной"
+      },
+      "price": "€8,000",
+      "unit": ""
+    },
+    {
+      "label": {
+        "en": "Full renovation",
+        "uk": "Повний ремонт",
+        "ru": "Полный ремонт"
+      },
+      "price": "€450",
+      "unit": "perSqm"
+    },
+    {
+      "label": {
+        "en": "House construction",
+        "uk": "Будівництво будинку",
+        "ru": "Строительство дома"
+      },
+      "price": "€1,400",
+      "unit": "perSqm"
+    }
+  ]
+}

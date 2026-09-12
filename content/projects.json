@@ -1,0 +1,320 @@
+{
+  "items": [
+    {
+      "id": "amsterdam-apartment",
+      "category": "renovation",
+      "featured": true,
+      "cover": "images/projects/apartment-cover.svg",
+      "gallery": [
+        "images/projects/apartment-1.svg",
+        "images/projects/apartment-2.svg",
+        "images/projects/apartment-3.svg"
+      ],
+      "title": {
+        "en": "Apartment in Amsterdam",
+        "uk": "Квартира в Амстердамі",
+        "ru": "Квартира в Амстердаме"
+      },
+      "subtitle": {
+        "en": "Turnkey renovation",
+        "uk": "Ремонт під ключ",
+        "ru": "Ремонт под ключ"
+      },
+      "location": {
+        "en": "Amsterdam, Oud-West",
+        "uk": "Амстердам, Oud-West",
+        "ru": "Амстердам, Oud-West"
+      },
+      "year": "2024",
+      "area": "85 m²",
+      "duration": {
+        "en": "3 months",
+        "uk": "3 місяці",
+        "ru": "3 месяца"
+      },
+      "budget": "€42,000",
+      "summary": {
+        "en": "A 1930s apartment rebuilt into a bright, open family home without touching the load-bearing structure.",
+        "uk": "Квартира 1930-х перетворена на світле відкрите житло для родини без втручання в несучі конструкції.",
+        "ru": "Квартира 1930-х превращена в светлое открытое жильё для семьи без вмешательства в несущие конструкции."
+      },
+      "challenge": {
+        "en": "Dark rooms, old wiring and a cramped kitchen separated from the living area. The owners needed more light and one shared space, while keeping the original oak floors.",
+        "uk": "Темні кімнати, стара електрика й тісна кухня, відокремлена від вітальні. Власники хотіли більше світла та єдиний простір, зберігши оригінальну дубову підлогу.",
+        "ru": "Тёмные комнаты, старая электрика и тесная кухня, отделённая от гостиной. Владельцы хотели больше света и единое пространство, сохранив оригинальный дубовый пол."
+      },
+      "solution": {
+        "en": "We removed two non-structural partitions, replaced all wiring and plumbing, installed underfloor heating and restored the oak parquet. New built-in storage runs along the corridor to keep the main rooms clear.",
+        "uk": "Ми прибрали дві ненесучі перегородки, замінили всю електрику й сантехніку, встановили тепла підлога та відреставрували дубовий паркет. Нові вбудовані шафи вздовж коридору звільнили основні кімнати.",
+        "ru": "Мы убрали две ненесущие перегородки, заменили всю электрику и сантехнику, сделали тёплый пол и отреставрировали дубовый паркет. Новые встроенные шкафы вдоль коридора освободили основные комнаты."
+      },
+      "result": {
+        "en": "Delivered on schedule, 4% under the agreed estimate. The living area gained 12 m² of usable space.",
+        "uk": "Здано в термін, на 4% дешевше погодженого кошторису. Житлова зона отримала 12 м² корисної площі.",
+        "ru": "Сдано в срок, на 4% дешевле согласованной сметы. Жилая зона получила 12 м² полезной площади."
+      },
+      "scope": {
+        "en": [
+          "Demolition and waste removal",
+          "Electrics and plumbing renewal",
+          "Underfloor heating",
+          "Oak parquet restoration",
+          "Kitchen and bathroom fit-out",
+          "Painting and finishing"
+        ],
+        "uk": [
+          "Демонтаж і вивезення сміття",
+          "Заміна електрики та сантехніки",
+          "Тепла підлога",
+          "Реставрація дубового паркету",
+          "Монтаж кухні та ванної",
+          "Малярні та фінішні роботи"
+        ],
+        "ru": [
+          "Демонтаж и вывоз мусора",
+          "Замена электрики и сантехники",
+          "Тёплый пол",
+          "Реставрация дубового паркета",
+          "Монтаж кухни и ванной",
+          "Малярные и финишные работы"
+        ]
+      }
+    },
+    {
+      "id": "hilversum-house",
+      "category": "construction",
+      "featured": true,
+      "cover": "images/projects/house-cover.svg",
+      "gallery": [
+        "images/projects/house-1.svg",
+        "images/projects/house-2.svg"
+      ],
+      "title": {
+        "en": "Private house in Hilversum",
+        "uk": "Приватний будинок у Хілверсюмі",
+        "ru": "Частный дом в Хилверсюме"
+      },
+      "subtitle": {
+        "en": "New build",
+        "uk": "Будівництво",
+        "ru": "Строительство"
+      },
+      "location": {
+        "en": "Hilversum",
+        "uk": "Хілверсюм",
+        "ru": "Хилверсюм"
+      },
+      "year": "2023",
+      "area": "180 m²",
+      "duration": {
+        "en": "11 months",
+        "uk": "11 місяців",
+        "ru": "11 месяцев"
+      },
+      "budget": "€265,000",
+      "summary": {
+        "en": "A two-storey family house built from foundation to keys, including permits and energy certification.",
+        "uk": "Двоповерховий сімейний будинок від фундаменту до ключів, разом із дозволами та енергосертифікацією.",
+        "ru": "Двухэтажный семейный дом от фундамента до ключей, включая разрешения и энергосертификацию."
+      },
+      "challenge": {
+        "en": "The plot had a high water table and strict municipal rules on roof height and façade materials.",
+        "uk": "Ділянка з високим рівнем ґрунтових вод і суворі муніципальні вимоги до висоти даху та матеріалів фасаду.",
+        "ru": "Участок с высоким уровнем грунтовых вод и строгие муниципальные требования к высоте крыши и материалам фасада."
+      },
+      "solution": {
+        "en": "We handled the permit process, designed a pile foundation with waterproofed basement level, and used a vertical timber façade approved by the municipality. Heat pump and triple glazing brought the house to an A++ energy label.",
+        "uk": "Ми провели процес дозволів, спроєктували палевий фундамент із гідроізольованим підвалом і застосували вертикальний деревʼяний фасад, погоджений із муніципалітетом. Тепловий насос і потрійне скління дали будинку клас A++.",
+        "ru": "Мы провели процесс разрешений, спроектировали свайный фундамент с гидроизолированным подвалом и применили вертикальный деревянный фасад, согласованный с муниципалитетом. Тепловой насос и тройное остекление дали дому класс A++."
+      },
+      "result": {
+        "en": "Handed over with full documentation and a 10-year structural warranty.",
+        "uk": "Передано з повною документацією та 10-річною гарантією на конструктив.",
+        "ru": "Передан с полной документацией и 10-летней гарантией на конструктив."
+      },
+      "scope": {
+        "en": [
+          "Permits and approvals",
+          "Pile foundation and structure",
+          "Roof and timber façade",
+          "Heat pump and ventilation",
+          "Interior finishing",
+          "Landscaping"
+        ],
+        "uk": [
+          "Дозволи та погодження",
+          "Палевий фундамент і конструктив",
+          "Дах і деревʼяний фасад",
+          "Тепловий насос і вентиляція",
+          "Внутрішнє оздоблення",
+          "Благоустрій"
+        ],
+        "ru": [
+          "Разрешения и согласования",
+          "Свайный фундамент и конструктив",
+          "Крыша и деревянный фасад",
+          "Тепловой насос и вентиляция",
+          "Внутренняя отделка",
+          "Благоустройство"
+        ]
+      }
+    },
+    {
+      "id": "villa-reconstruction",
+      "category": "renovation",
+      "featured": true,
+      "cover": "images/projects/villa-cover.svg",
+      "gallery": [
+        "images/projects/villa-1.svg",
+        "images/projects/villa-2.svg"
+      ],
+      "title": {
+        "en": "Villa reconstruction",
+        "uk": "Реконструкція вілли",
+        "ru": "Реконструкция виллы"
+      },
+      "subtitle": {
+        "en": "Reconstruction",
+        "uk": "Реконструкція",
+        "ru": "Реконструкция"
+      },
+      "location": {
+        "en": "Bloemendaal",
+        "uk": "Блуменда́ль",
+        "ru": "Блуменда́ль"
+      },
+      "year": "2024",
+      "area": "240 m²",
+      "duration": {
+        "en": "8 months",
+        "uk": "8 місяців",
+        "ru": "8 месяцев"
+      },
+      "budget": "€310,000",
+      "summary": {
+        "en": "A 1960s villa stripped back to the shell and rebuilt with a new kitchen wing and full insulation.",
+        "uk": "Віла 1960-х розібрана до каркаса й відбудована з новим кухонним крилом і повним утепленням.",
+        "ru": "Вилла 1960-х разобрана до каркаса и перестроена с новым кухонным крылом и полным утеплением."
+      },
+      "challenge": {
+        "en": "Cold single-brick walls, a leaking flat roof and a kitchen too small for the family of five.",
+        "uk": "Холодні стіни в одну цеглину, протікаючий плоский дах і замала кухня для родини з п'яти осіб.",
+        "ru": "Холодные стены в один кирпич, протекающая плоская крыша и слишком маленькая кухня для семьи из пяти человек."
+      },
+      "solution": {
+        "en": "External insulation and a new warm roof cut heating demand by more than half. We added a 35 m² kitchen extension with sliding glazing onto the garden, and rebuilt all bathrooms.",
+        "uk": "Зовнішнє утеплення та новий теплий дах зменшили потребу в опаленні більш ніж удвічі. Додали кухонну прибудову 35 м² зі зсувним склінням у сад і перебудували всі санвузли.",
+        "ru": "Внешнее утепление и новая тёплая кровля снизили потребность в отоплении более чем вдвое. Добавили кухонную пристройку 35 м² со сдвижным остеклением в сад и перестроили все санузлы."
+      },
+      "result": {
+        "en": "Energy label moved from F to A. The family moved back in two weeks earlier than planned.",
+        "uk": "Енергетичний клас змінився з F на A. Родина повернулася на два тижні раніше плану.",
+        "ru": "Энергетический класс изменился с F на A. Семья вернулась на две недели раньше плана."
+      },
+      "scope": {
+        "en": [
+          "Structural survey",
+          "External insulation and warm roof",
+          "35 m² kitchen extension",
+          "Three bathrooms rebuilt",
+          "New electrics and heating",
+          "Interior finishing"
+        ],
+        "uk": [
+          "Обстеження конструкцій",
+          "Зовнішнє утеплення і теплий дах",
+          "Прибудова кухні 35 м²",
+          "Три санвузли заново",
+          "Нова електрика й опалення",
+          "Внутрішнє оздоблення"
+        ],
+        "ru": [
+          "Обследование конструкций",
+          "Внешнее утепление и тёплая кровля",
+          "Пристройка кухни 35 м²",
+          "Три санузла заново",
+          "Новая электрика и отопление",
+          "Внутренняя отделка"
+        ]
+      }
+    },
+    {
+      "id": "rotterdam-office",
+      "category": "commercial",
+      "featured": true,
+      "cover": "images/projects/office-cover.svg",
+      "gallery": [
+        "images/projects/office-1.svg"
+      ],
+      "title": {
+        "en": "Office in Rotterdam",
+        "uk": "Офіс у Роттердамі",
+        "ru": "Офис в Роттердаме"
+      },
+      "subtitle": {
+        "en": "Turnkey fit-out",
+        "uk": "Ремонт під ключ",
+        "ru": "Ремонт под ключ"
+      },
+      "location": {
+        "en": "Rotterdam, Kop van Zuid",
+        "uk": "Роттердам, Kop van Zuid",
+        "ru": "Роттердам, Kop van Zuid"
+      },
+      "year": "2023",
+      "area": "320 m²",
+      "duration": {
+        "en": "10 weeks",
+        "uk": "10 тижнів",
+        "ru": "10 недель"
+      },
+      "budget": "€120,000",
+      "summary": {
+        "en": "An open-plan office fit-out delivered in ten weeks while the neighbouring floors stayed in use.",
+        "uk": "Ремонт офісу open-space за десять тижнів, поки сусідні поверхи продовжували працювати.",
+        "ru": "Ремонт офиса open-space за десять недель, пока соседние этажи продолжали работать."
+      },
+      "challenge": {
+        "en": "A tight ten-week window before the tenant moved in, with noise restrictions during business hours.",
+        "uk": "Жорсткі десять тижнів до заселення орендаря та обмеження шуму в робочі години.",
+        "ru": "Жёсткие десять недель до заселения арендатора и ограничения по шуму в рабочие часы."
+      },
+      "solution": {
+        "en": "We ran demolition and heavy works in evening shifts, prefabricated the acoustic meeting pods off site and coordinated deliveries with the building manager.",
+        "uk": "Демонтаж і важкі роботи виконували у вечірні зміни, акустичні переговорні виготовили поза об'єктом і узгодили постачання з керуючим будівлі.",
+        "ru": "Демонтаж и тяжёлые работы выполняли в вечерние смены, акустические переговорные изготовили вне объекта и согласовали поставки с управляющим здания."
+      },
+      "result": {
+        "en": "Opened on the planned date with zero complaints from other tenants.",
+        "uk": "Відкрито в запланований день, без жодної скарги від інших орендарів.",
+        "ru": "Открыт в запланированный день, без единой жалобы от других арендаторов."
+      },
+      "scope": {
+        "en": [
+          "Space planning",
+          "Electrics and data cabling",
+          "Acoustic meeting pods",
+          "Kitchen and sanitary units",
+          "Flooring and ceilings",
+          "Lighting design"
+        ],
+        "uk": [
+          "Планування простору",
+          "Електрика та мережі",
+          "Акустичні переговорні",
+          "Кухня та санвузли",
+          "Підлоги та стелі",
+          "Світловий дизайн"
+        ],
+        "ru": [
+          "Планировка пространства",
+          "Электрика и сети",
+          "Акустические переговорные",
+          "Кухня и санузлы",
+          "Полы и потолки",
+          "Световой дизайн"
+        ]
+      }
+    }
+  ]
+}

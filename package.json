@@ -1,0 +1,13 @@
+{
+  "name": "renovations-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multilingual landing page for a renovation and construction company",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs --serve",
+    "placeholders": "node scripts/make-placeholders.mjs"
+  },
+  "engines": { "node": ">=18" }
+}

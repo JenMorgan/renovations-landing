@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "author": {
+        "en": "Maria, Amsterdam",
+        "uk": "Марія, Амстердам",
+        "ru": "Мария, Амстердам"
+      },
+      "rating": 5,
+      "photo": "images/projects/apartment-1.svg",
+      "text": {
+        "en": "Great team! Everything was done on time and without extra hassle. Highly recommend.",
+        "uk": "Чудова команда! Усе зробили в термін і без зайвих проблем. Рекомендуємо!",
+        "ru": "Отличная команда! Всё сделали в срок и без лишних проблем. Рекомендуем!"
+      }
+    },
+    {
+      "author": {
+        "en": "Alexey, Hilversum",
+        "uk": "Олексій, Хілверсюм",
+        "ru": "Алексей, Хилверсюм"
+      },
+      "rating": 5,
+      "photo": "images/projects/house-1.svg",
+      "text": {
+        "en": "They built our dream house. Always reachable and always ready with a solution.",
+        "uk": "Побудували будинок нашої мрії. Завжди на зв'язку і завжди з рішенням.",
+        "ru": "Построили дом нашей мечты. Всегда на связи и всегда с решением."
+      }
+    },
+    {
+      "author": {
+        "en": "Irina, Utrecht",
+        "uk": "Ірина, Утрехт",
+        "ru": "Ирина, Утрехт"
+      },
+      "rating": 5,
+      "photo": "images/projects/villa-1.svg",
+      "text": {
+        "en": "Excellent quality. Very happy with the result — the bathroom looks better than in the drawings.",
+        "uk": "Якість на висоті. Дуже задоволені результатом — ванна виглядає краще, ніж на кресленнях.",
+        "ru": "Качество на высоте. Очень довольны результатом — ванная выглядит лучше, чем на чертежах."
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Placeholder image">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9e4da"/><stop offset="1" stop-color="#d8d1c4"/></linearGradient>
+<linearGradient id="warm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c9a97e" stop-opacity=".55"/><stop offset="1" stop-color="#3c4a35" stop-opacity=".25"/></linearGradient>
+<linearGradient id="glassg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfd6d1"/><stop offset="1" stop-color="#9aa49d"/></linearGradient>
+</defs>
+<rect width="1200" height="900" fill="url(#sky)"/>
+
+  <rect width="1200" height="900" fill="#efece5"/>
+  <rect x="72" y="108" width="480" height="450" fill="url(#glassg)"/>
+  <rect x="312" y="108" width="12" height="450" fill="#efece5"/>
+  <rect y="666" width="1200" height="234" fill="#c9a97e" opacity=".55"/>
+  <rect x="624" y="306" width="480" height="360" fill="#ded8cc"/>
+  <rect x="672.0000000000001" y="396" width="384" height="180" fill="#3c4a35" opacity=".55"/>
+  <rect x="120" y="594" width="360" height="108" fill="#6b7860" opacity=".5"/>
+  <path d="M72 558 L552 558 L624 666 L0 666 Z" fill="#ffffff" opacity=".3"/>
+</svg>
