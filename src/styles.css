@@ -485,6 +485,7 @@ input[aria-invalid="true"], textarea[aria-invalid="true"], select[aria-invalid="
 .cta-band h2 { font-size: clamp(20px, 3vw, 30px); text-transform: uppercase; letter-spacing: .05em; }
 .cta-band p { margin: 8px 0 0; color: rgba(255, 255, 255, .8); font-size: 15px; }
 
-.reveal { opacity: 0; transform: translateY(14px); transition: opacity 600ms ease, transform 600ms cubic-bezier(.2, .7, .3, 1); }
-.reveal.is-in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+/* Only hide sections up-front when scripting is available to reveal them. */
+.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity 600ms ease, transform 600ms cubic-bezier(.2, .7, .3, 1); }
+.js .reveal.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; } }
